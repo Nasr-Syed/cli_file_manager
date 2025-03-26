@@ -1,6 +1,6 @@
-# 🗂️ Python CLI File Manager & Interview Cheat Sheet
+# 🗂️ Python CLI File Manager 
 
-This repository contains a **Python CLI File Manager** along with a **comprehensive Python & SQL cheat sheet** for technical interviews.
+This repository contains a **Python CLI File Manager**
 
 ---
 
