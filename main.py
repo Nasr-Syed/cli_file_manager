@@ -6,42 +6,42 @@ def list_files():
     """Lists all files and directories in the current directory."""
     items = os.listdir('.')
     for item in items:
-        print(f"📂 {item}" if os.path.isdir(item) else f"📄 {item}")
+        print(f"{item}" if os.path.isdir(item) else f"📄 {item}")
 
 def create_file(filename):
     """Creates a new empty file."""
     with open(filename, 'w') as f:
         pass
-    print(f"✅ File '{filename}' created.")
+    print(f"File '{filename}' created.")
 
 def create_directory(dirname):
     """Creates a new directory."""
     os.makedirs(dirname, exist_ok=True)
-    print(f"✅ Directory '{dirname}' created.")
+    print(f"Directory '{dirname}' created.")
 
 def delete_file(filename):
     """Deletes a file."""
     if os.path.exists(filename):
         os.remove(filename)
-        print(f"❌ File '{filename}' deleted.")
+        print(f"File '{filename}' deleted.")
     else:
-        print(f"⚠️ File '{filename}' not found.")
+        print(f"File '{filename}' not found.")
 
 def delete_directory(dirname):
     """Deletes a directory and its contents."""
     if os.path.exists(dirname):
         shutil.rmtree(dirname)
-        print(f"❌ Directory '{dirname}' deleted.")
+        print(f"Directory '{dirname}' deleted.")
     else:
-        print(f"⚠️ Directory '{dirname}' not found.")
+        print(f"Directory '{dirname}' not found.")
 
 def move_file(source, destination):
     """Moves a file or directory."""
     if os.path.exists(source):
         shutil.move(source, destination)
-        print(f"📦 Moved '{source}' to '{destination}'.")
+        print(f"Moved '{source}' to '{destination}'.")
     else:
-        print(f"⚠️ '{source}' not found.")
+        print(f"'{source}' not found.")
 
 def read_file(filename):
     """Reads and prints the contents of a file."""
@@ -49,7 +49,7 @@ def read_file(filename):
         with open(filename, 'r') as f:
             print(f.read())
     else:
-        print(f"⚠️ File '{filename}' not found.")
+        print(f"File '{filename}' not found.")
 
 def main():
     parser = argparse.ArgumentParser(description="Simple Python CLI File Manager")
