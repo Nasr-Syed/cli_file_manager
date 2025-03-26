@@ -76,7 +76,7 @@ def main():
     elif command == "cat" and command_args:
         read_file(command_args[0])
     else:
-        print("⚠️ Invalid command or missing arguments.")
+        print("Invalid command or missing arguments.")
 
 if __name__ == "__main__":
     main()
